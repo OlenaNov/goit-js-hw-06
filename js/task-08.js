@@ -4,8 +4,6 @@ const buttonSubmitEl = document.querySelector('button');
 const inputEmailEl = document.querySelector("input[name='email']");
 const inputPasswordEl = document.querySelector("input[name='password']");
 
-// const arrLoginFormElements = {};
-
 buttonSubmitEl.addEventListener('click', onLoginForm);
 
 function onLoginForm() {
