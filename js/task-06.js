@@ -1,17 +1,20 @@
 
-const inputValidation = document.querySelector('#validation-input');
-const dataLength = document.querySelector('input[data-length="6"]');
-const styleValidationInput = document.querySelector('style');
+const inputValue = document.querySelector('#validation-input');
 
+const controlValidation = inputValue.addEventListener('blur', makecontrolValidation);
 
-const makecontrolValidation = () => {
-    if(Number(inputValidation.value.length) >= Number(dataLength.dataset.length)) {
-        inputValidation.classList.add("valid");
-        inputValidation.classList.remove("invalid");
+function makecontrolValidation() {
+
+    if(inputValue.value.length === Number(inputValue.dataset.length)) {
+        changeClass("valid", "invalid");
+
     } else {
-        inputValidation.classList.add("invalid");
-        inputValidation.classList.remove("valid");
+        changeClass("invalid", "valid");
     }
 };
 
-const controlValidation = inputValidation.addEventListener('blur', makecontrolValidation);
+function changeClass(addClass, removeClass) {
+        inputValue.classList.add(addClass);
+        inputValue.classList.remove(removeClass);
+};
+

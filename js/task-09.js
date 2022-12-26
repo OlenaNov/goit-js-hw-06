@@ -12,6 +12,7 @@ function getRandomHexColor() {
 };
 
 function onChangeColorButton() {
-  bodyEl.style.color = getRandomHexColor();
-  colorText.textContent = getRandomHexColor();
+  const newColor = getRandomHexColor();
+  bodyEl.style.color = newColor;
+  colorText.textContent = newColor;
 };

@@ -14,7 +14,7 @@ function onLoginForm() {
 function onStopUpdate(evt) {
     evt.preventDefault();
 
-    if(!(inputEmailEl.value) && !(inputPasswordEl.value)) {
+    if(!(inputEmailEl.value) || !(inputPasswordEl.value)) {
 
         alert('Form must be completed!');
 
@@ -23,7 +23,7 @@ function onStopUpdate(evt) {
         const loginFormElements = evt.currentTarget;
         const arrLoginFormElements = {
             email: loginFormElements.email.value,
-            password: loginFormElements.email.value,
+            password: loginFormElements.password.value,
         };
         console.log(arrLoginFormElements);
 
